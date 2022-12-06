@@ -77,4 +77,5 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.8'
     implementation 'com.github.florent37:picassopalette:2.0.0'
     implementation 'androidx.palette:palette-ktx:1.0.0'
+    implementation 'com.synnapps:carouselview:0.1.5'
 }

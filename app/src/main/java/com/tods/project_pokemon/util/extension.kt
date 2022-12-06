@@ -18,20 +18,10 @@ fun View.hide() {
     visibility = View.INVISIBLE
 }
 
-fun loadImage(
-    imageView: ImageView,
-    path: String,
-    extension: String
-) {
-    Glide.with(imageView.context)
-        .load("$path.$extension")
-        .into(imageView)
-}
-
 fun String.limitedDescription(characters: Int): String {
     if (this.length > characters) {
         val firstCharacter = 0
-        return "${this.substring(firstCharacter, characters)}..."
+        return this.substring(firstCharacter, characters)
     }
     return this
 }

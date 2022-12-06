@@ -3,8 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/custom_progress.xml" value="0.129" />
+        <entry key="app/src/main/res/drawable/custom_round_background.xml" value="0.129" />
+        <entry key="app/src/main/res/drawable/ic_bug.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_dark.xml" value="0.146" />
+        <entry key="app/src/main/res/drawable/ic_dragon.xml" value="0.146" />
+        <entry key="app/src/main/res/drawable/ic_electric.xml" value="0.146" />
+        <entry key="app/src/main/res/drawable/ic_fairy.xml" value="0.146" />
+        <entry key="app/src/main/res/drawable/ic_fighting.xml" value="0.146" />
+        <entry key="app/src/main/res/drawable/ic_fire.xml" value="0.146" />
+        <entry key="app/src/main/res/drawable/ic_flying.xml" value="0.146" />
+        <entry key="app/src/main/res/drawable/ic_ghost.xml" value="0.146" />
+        <entry key="app/src/main/res/drawable/ic_grass.xml" value="0.146" />
+        <entry key="app/src/main/res/drawable/ic_ground.xml" value="0.146" />
+        <entry key="app/src/main/res/drawable/ic_ice.xml" value="0.146" />
+        <entry key="app/src/main/res/drawable/ic_normal.xml" value="0.146" />
+        <entry key="app/src/main/res/drawable/ic_poison.xml" value="0.146" />
         <entry key="app/src/main/res/drawable/ic_psy_search_24.xml" value="0.129" />
+        <entry key="app/src/main/res/drawable/ic_psychic.xml" value="0.146" />
+        <entry key="app/src/main/res/drawable/ic_rock.xml" value="0.146" />
+        <entry key="app/src/main/res/drawable/ic_steel.xml" value="0.146" />
+        <entry key="app/src/main/res/drawable/ic_water.xml" value="0.146" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_pokemon_details.xml" value="0.30512820512820515" />
         <entry key="app/src/main/res/layout/fragment_pokemon_favorites.xml" value="0.29375" />
         <entry key="app/src/main/res/layout/fragment_pokemon_list.xml" value="0.29375" />
         <entry key="app/src/main/res/layout/fragment_pokemon_search.xml" value="0.29375" />

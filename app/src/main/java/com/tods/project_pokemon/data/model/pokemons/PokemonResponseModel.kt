@@ -5,6 +5,7 @@ import com.tods.project_pokemon.data.model.pokemons.abilities.AbilitiesModel
 import com.tods.project_pokemon.data.model.pokemons.forms.FormsModel
 import com.tods.project_pokemon.data.model.pokemons.moves.MovesModel
 import com.tods.project_pokemon.data.model.pokemons.sprites.SpritesModel
+import com.tods.project_pokemon.data.model.pokemons.stats.StatsModel
 import com.tods.project_pokemon.data.model.pokemons.types.TypesModel
 import java.io.Serializable
 
@@ -21,6 +22,8 @@ data class PokemonResponseModel(
     val moves: List<MovesModel>,
     @SerializedName("sprites")
     val sprites: SpritesModel,
+    @SerializedName("stats")
+    val stats: List<StatsModel>,
     @SerializedName("types")
     val types: List<TypesModel>
 ): Serializable

@@ -1,6 +1,400 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/mainConstraint"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical">
+
+    <ProgressBar
+        android:id="@+id/progressPokemonDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:indeterminateTint="@color/yellow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_round_background"
+            android:padding="10dp">
+
+            <ProgressBar
+                android:id="@+id/progressSpeed"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:indeterminate="false"
+                android:max="255"
+                android:progress="80"
+                android:progressDrawable="@drawable/custom_progress"
+                app:layout_constraintStart_toEndOf="@+id/progressSpecialDefense"
+                app:layout_constraintTop_toBottomOf="@+id/textSpecialAttack" />
+
+            <TextView
+                android:id="@+id/textSpeed"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/speed"
+                android:textAlignment="center"
+                app:layout_constraintStart_toEndOf="@+id/textCountSpecialDefense"
+                app:layout_constraintTop_toBottomOf="@+id/progressSpeed" />
+
+            <TextView
+                android:id="@+id/textSpecialDefense"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:text="@string/s_def"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progressSpecialDefense" />
+
+            <ProgressBar
+                android:id="@+id/progressSpecialDefense"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:indeterminate="false"
+                android:max="255"
+                android:progress="80"
+                android:progressDrawable="@drawable/custom_progress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textAttack" />
+
+            <ProgressBar
+                android:id="@+id/progressDefense"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:indeterminate="false"
+                android:max="255"
+                android:progress="80"
+                android:progressDrawable="@drawable/custom_progress"
+                app:layout_constraintStart_toEndOf="@+id/progressHp"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <ProgressBar
+                android:id="@+id/progressSpecialAttack"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:indeterminate="false"
+                android:max="255"
+                android:progress="80"
+                android:progressDrawable="@drawable/custom_progress"
+                app:layout_constraintStart_toEndOf="@+id/progressAttack"
+                app:layout_constraintTop_toBottomOf="@+id/textDefense" />
+
+            <TextView
+                android:id="@+id/textDefense"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/def"
+                android:textAlignment="center"
+                app:layout_constraintStart_toEndOf="@+id/textCountHp"
+                app:layout_constraintTop_toBottomOf="@+id/progressDefense" />
+
+            <TextView
+                android:id="@+id/textSpecialAttack"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/s_atk"
+                android:textAlignment="center"
+                app:layout_constraintStart_toEndOf="@+id/textCountAttack"
+                app:layout_constraintTop_toBottomOf="@+id/progressSpecialAttack" />
+
+            <ProgressBar
+                android:id="@+id/progressAttack"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:indeterminate="false"
+                android:max="255"
+                android:progress="80"
+                android:progressDrawable="@drawable/custom_progress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textHp" />
+
+            <TextView
+                android:id="@+id/textAttack"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/attack"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progressAttack" />
+
+            <ImageView
+                android:id="@+id/imageType2"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imagePokemonDetails"
+                app:layout_constraintTop_toBottomOf="@+id/imageType1"
+                app:srcCompat="@drawable/ic_pokemon_24" />
+
+            <ImageView
+                android:id="@+id/imageType3"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imagePokemonDetails"
+                app:layout_constraintTop_toBottomOf="@+id/imageType2"
+                app:srcCompat="@drawable/ic_pokemon_24" />
+
+            <ImageView
+                android:id="@+id/imagePokemonDetails"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <TextView
+                android:id="@+id/textPokemonNameDetails"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/pokemon"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imagePokemonDetails" />
+
+            <ImageView
+                android:id="@+id/imageType1"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imagePokemonDetails"
+                app:layout_constraintTop_toBottomOf="@+id/carouselView"
+                app:srcCompat="@drawable/ic_pokemon_24" />
+
+            <com.synnapps.carouselview.CarouselView
+                android:id="@+id/carouselView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:fillColor="#FFFFFFFF"
+                app:indicatorVisibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imagePokemonDetails"
+                app:layout_constraintTop_toTopOf="parent"
+                app:pageColor="#00000000"
+                app:radius="6dp"
+                app:slideInterval="3000"
+                app:strokeColor="#000000"
+                app:strokeWidth="2dp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="@string/abilities"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textPokemonNameDetails" />
+
+            <TextView
+                android:id="@+id/textAbility1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/ability"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/textAbility2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/ability"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold|italic"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textAbility1" />
+
+            <TextView
+                android:id="@+id/textAbility3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/ability"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold|italic"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textAbility2" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="@string/stats"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textPokemonNameDetails" />
+
+            <ProgressBar
+                android:id="@+id/progressHp"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:indeterminate="false"
+                android:max="255"
+                android:progress="80"
+                android:progressDrawable="@drawable/custom_progress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <TextView
+                android:id="@+id/textHp"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/hp"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progressHp" />
+
+            <TextView
+                android:id="@+id/textCountHp"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/count"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textHp"
+                app:layout_constraintTop_toBottomOf="@+id/progressHp" />
+
+            <TextView
+                android:id="@+id/textCountDefense"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/count"
+                android:textAlignment="center"
+
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textDefense"
+                app:layout_constraintTop_toBottomOf="@+id/progressDefense" />
+
+            <TextView
+                android:id="@+id/textCountSpecialAttack"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/count"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textSpecialAttack"
+                app:layout_constraintTop_toBottomOf="@+id/progressSpecialAttack" />
+
+            <TextView
+                android:id="@+id/textCountAttack"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/count"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textAttack"
+                app:layout_constraintTop_toBottomOf="@+id/progressAttack" />
+
+            <TextView
+                android:id="@+id/textCountSpecialDefense"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/count"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textSpecialDefense"
+                app:layout_constraintTop_toBottomOf="@+id/progressSpecialDefense" />
+
+            <TextView
+                android:id="@+id/textCountSpeed"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/count"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textSpeed"
+                app:layout_constraintTop_toBottomOf="@+id/progressSpeed" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Moves"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textAbility3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
