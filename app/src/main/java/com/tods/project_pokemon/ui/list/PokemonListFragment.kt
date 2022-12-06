@@ -6,10 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.tods.project_pokemon.R
-import com.tods.project_pokemon.data.model.list.results.ResultsModel
 import com.tods.project_pokemon.databinding.FragmentPokemonListBinding
 import com.tods.project_pokemon.state.ResourceState
 import com.tods.project_pokemon.ui.adapters.PokemonAdapter
@@ -33,6 +32,14 @@ class PokemonListFragment: BaseFragment<FragmentPokemonListBinding, PokemonListV
         super.onViewCreated(view, savedInstanceState)
         configRecyclerView()
         configDataCollection()
+        configClickAdapter()
+    }
+
+    private fun configClickAdapter() {
+        pokemonListAdapter.setOnClickListener { data ->
+            val action = PokemonListFragmentDirections.actionPokemonListFragmentToPokemonDetailsFragment(data)
+            findNavController().navigate(action)
+        }
     }
 
     private fun configDataCollection() = lifecycleScope.launch {

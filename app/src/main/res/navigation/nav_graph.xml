@@ -10,7 +10,11 @@
         android:id="@+id/pokemonListFragment"
         android:name="com.tods.project_pokemon.ui.list.PokemonListFragment"
         android:label="PokemonListFragment"
-        tools:layout="@layout/fragment_pokemon_list"/>
+        tools:layout="@layout/fragment_pokemon_list">
+        <action
+            android:id="@+id/action_pokemonListFragment_to_pokemonDetailsFragment"
+            app:destination="@id/pokemonDetailsFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/pokemonFavoritesFragment"
@@ -29,5 +33,15 @@
         android:name="com.tods.project_pokemon.ui.types.PokemonTypesFragment"
         android:label="PokemonTypesFragment"
         tools:layout="@layout/fragment_pokemon_types"/>
+
+    <fragment
+        android:id="@+id/pokemonDetailsFragment"
+        android:name="com.tods.project_pokemon.ui.details.PokemonDetailsFragment"
+        android:label="PokemonDetailsFragment"
+        tools:layout="@layout/fragment_pokemon_details">
+        <argument
+            android:name="data"
+            app:argType="com.tods.project_pokemon.data.model.list.results.ResultsModel" />
+    </fragment>
 
 </navigation>
