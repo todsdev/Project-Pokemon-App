@@ -11,4 +11,22 @@
     <color name="gray">#918E80</color>
     <color name="red">#FF2A36</color>
     <color name="green">#09AF2D</color>
+    <color name="poison_background">#CD92DD</color>
+    <color name="bug_background">#BADC6A</color>
+    <color name="dark_background">#ABA9B1</color>
+    <color name="dragon_background">#51A3F5</color>
+    <color name="fighting_background">#E07B8F</color>
+    <color name="fairy_background">#F7CAF3</color>
+    <color name="electric_background">#F6E78D</color>
+    <color name="ghost_background">#9AA3D5</color>
+    <color name="flying_background">#CCDAF5</color>
+    <color name="ice_background">#B3E5DD</color>
+    <color name="fire_background">#FDC487</color>
+    <color name="grass_background">#9DD699</color>
+    <color name="ground_background">#E7A888</color>
+    <color name="water_background">#98C5EC</color>
+    <color name="steel_background">#A1C6CE</color>
+    <color name="normal_background">#CCCDCB</color>
+    <color name="psychic_background">#FDC6C4</color>
+    <color name="rock_background">#DFD7B9</color>
 </resources>

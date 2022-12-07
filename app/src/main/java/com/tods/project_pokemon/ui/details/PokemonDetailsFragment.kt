@@ -51,8 +51,6 @@ class PokemonDetailsFragment: BaseFragment<FragmentPokemonDetailsBinding, Pokemo
         movesAdapter.setOnClickListener { data ->
             val action = PokemonDetailsFragmentDirections.actionPokemonDetailsFragmentToPokemonMoveFragment(data)
             findNavController().navigate(action)
-            Log.i("OnClick", "configClickAdapter: CLICK")
-            Timber.tag("OnClick").e("configClickAdapter")
         }
     }
 
@@ -67,8 +65,8 @@ class PokemonDetailsFragment: BaseFragment<FragmentPokemonDetailsBinding, Pokemo
         viewModel.details.collect { result ->
             when(result) {
                 is ResourceState.Success -> {
+                    binding.progressPokemonDetails.hide()
                     result.data?.let { values ->
-                        binding.progressPokemonDetails.hide()
                         movesAdapter.moves = values.moves.toList()
                         configName(values)
                         configAbilities(values)

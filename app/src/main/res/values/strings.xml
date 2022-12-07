@@ -37,4 +37,13 @@
     <string name="water">water</string>
     <string name="move">Move</string>
     <string name="moves">Moves</string>
+    <string name="value">Value</string>
+    <string name="pokemons_">Pokémons:</string>
+    <string name="power_">Power:</string>
+    <string name="power_points_">Power points:</string>
+    <string name="accuracy_">Accuracy:</string>
+    <string name="damage_class_">Damage class:</string>
+    <string name="type_">Type:</string>
+    <string name="effect_entries_">Effect entries:</string>
+    <string name="target_">Target:</string>
 </resources>

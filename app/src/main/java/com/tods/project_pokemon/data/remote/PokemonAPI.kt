@@ -4,6 +4,7 @@ import com.tods.project_pokemon.data.model.evolutions.EvolutionsResponseModel
 import com.tods.project_pokemon.data.model.forms.FormsResponseModel
 import com.tods.project_pokemon.data.model.list.PokemonListResponseModel
 import com.tods.project_pokemon.data.model.list.results.ResultsModel
+import com.tods.project_pokemon.data.model.moves.MovesResponseModel
 import com.tods.project_pokemon.data.model.pokemons.PokemonResponseModel
 import com.tods.project_pokemon.data.model.types.TypesResponseModel
 import retrofit2.Response
@@ -18,6 +19,14 @@ interface PokemonAPI {
         @Query("limit") limit: Int? = null,
         @Query("offset") offset: Int? = null
     ): Response<PokemonListResponseModel>
+
+    @GET("move/{name}")
+    suspend fun recoverMoveByName(
+        @Path(
+            value = "name",
+            encoded = true
+        ) moveName: String
+    ): Response<MovesResponseModel>
 
     @GET("pokemon/{name}")
     suspend fun recoverPokemonByName(
