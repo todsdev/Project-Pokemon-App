@@ -1,6 +1,263 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/custom_round_background"
+    android:backgroundTintMode="add"
+    android:padding="10dp">
 
+    <Button
+        android:id="@+id/buttonFighting"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/fighting_background"
+        android:drawableEnd="@drawable/ic_fighting_24"
+        android:text="@string/fighting"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonFire"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonFire"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/fire_background"
+        android:drawableEnd="@drawable/ic_fire_24"
+        android:text="@string/fire"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPsychic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFighting" />
+
+    <Button
+        android:id="@+id/buttonPsychic"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/psychic_background"
+        android:drawableEnd="@drawable/ic_psychic_24"
+        android:text="@string/psychic"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonIce"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFire" />
+
+    <Button
+        android:id="@+id/buttonIce"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/ice_background"
+        android:drawableEnd="@drawable/ic_ice_24"
+        android:text="@string/ice"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGhost"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPsychic" />
+
+    <Button
+        android:id="@+id/buttonGhost"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/ghost_background"
+        android:drawableEnd="@drawable/ic_ghost_24"
+        android:text="@string/ghost"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonDragon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonIce" />
+
+    <Button
+        android:id="@+id/buttonDragon"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/dragon_background"
+        android:drawableEnd="@drawable/ic_dragon_24"
+        android:text="@string/dragon"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonFlying"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGhost" />
+
+    <Button
+        android:id="@+id/buttonFlying"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/flying_background"
+        android:drawableEnd="@drawable/ic_flying_24"
+        android:text="@string/flying"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonElectric"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDragon" />
+
+    <Button
+        android:id="@+id/buttonElectric"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/electric_background"
+        android:drawableEnd="@drawable/ic_electric_24"
+        android:text="@string/electric"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonNormal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFlying" />
+
+    <Button
+        android:id="@+id/buttonNormal"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/normal_background"
+        android:drawableEnd="@drawable/ic_normal_24"
+        android:text="@string/normal"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonElectric" />
+
+    <Button
+        android:id="@+id/buttonDark"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/dark_background"
+        android:drawableLeft="@drawable/ic_dark_24"
+        android:text="@string/dark"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonFairy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonFairy"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/fairy_background"
+        android:drawableLeft="@drawable/ic_fairy_24"
+        android:text="@string/fairy"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGround"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDark" />
+
+    <Button
+        android:id="@+id/buttonGround"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/ground_background"
+        android:drawableLeft="@drawable/ic_ground_24"
+        android:text="@string/ground"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGrass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFairy" />
+
+    <Button
+        android:id="@+id/buttonGrass"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/grass_background"
+        android:drawableLeft="@drawable/ic_grass_24"
+        android:text="@string/grass"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPoison"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGround" />
+
+    <Button
+        android:id="@+id/buttonPoison"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/poison_background"
+        android:drawableLeft="@drawable/ic_poison_24"
+        android:text="@string/poison"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSteel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGrass" />
+
+    <Button
+        android:id="@+id/buttonSteel"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/steel_background"
+        android:drawableLeft="@drawable/ic_steel_24"
+        android:text="@string/steel"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonWater"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPoison" />
+
+    <Button
+        android:id="@+id/buttonWater"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/water_background"
+        android:drawableLeft="@drawable/ic_water_24"
+        android:text="@string/water"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBug"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSteel" />
+
+    <Button
+        android:id="@+id/buttonBug"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/bug_background"
+        android:drawableLeft="@drawable/ic_bug_24"
+        android:text="@string/bug"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonWater" />
+
+    <Button
+        android:id="@+id/buttonRock"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/rock_background"
+        android:drawableLeft="@drawable/ic_rock_24"
+        android:text="@string/rock"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBug" />
 </androidx.constraintlayout.widget.ConstraintLayout>
