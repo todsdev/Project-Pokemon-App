@@ -1,13 +1,16 @@
 package com.tods.project_pokemon.ui.details
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.github.florent37.picassopalette.PicassoPalette
 import com.squareup.picasso.Picasso
 import com.synnapps.carouselview.ImageListener
@@ -16,6 +19,7 @@ import com.tods.project_pokemon.data.model.list.results.ResultsModel
 import com.tods.project_pokemon.data.model.pokemons.PokemonResponseModel
 import com.tods.project_pokemon.databinding.FragmentPokemonDetailsBinding
 import com.tods.project_pokemon.state.ResourceState
+import com.tods.project_pokemon.ui.adapters.MoveAdapter
 import com.tods.project_pokemon.ui.base.BaseFragment
 import com.tods.project_pokemon.util.hide
 import com.tods.project_pokemon.util.show
@@ -33,11 +37,30 @@ class PokemonDetailsFragment: BaseFragment<FragmentPokemonDetailsBinding, Pokemo
         FragmentPokemonDetailsBinding.inflate(inflater, container, false)
     private val args: PokemonDetailsFragmentArgs by navArgs()
     private lateinit var results: ResultsModel
+    private val movesAdapter by lazy { MoveAdapter() }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         configInitialSettings()
         configDataCollection()
+        configRecyclerView()
+        configClickAdapter()
+    }
+
+    private fun configClickAdapter() {
+        movesAdapter.setOnClickListener { data ->
+            val action = PokemonDetailsFragmentDirections.actionPokemonDetailsFragmentToPokemonMoveFragment(data)
+            findNavController().navigate(action)
+            Log.i("OnClick", "configClickAdapter: CLICK")
+            Timber.tag("OnClick").e("configClickAdapter")
+        }
+    }
+
+    private fun configRecyclerView() = with(binding) {
+        recyclerMoves.apply {
+            layoutManager = LinearLayoutManager(requireContext())
+            adapter = movesAdapter
+        }
     }
 
     private fun configDataCollection() = lifecycleScope.launch {
@@ -46,6 +69,7 @@ class PokemonDetailsFragment: BaseFragment<FragmentPokemonDetailsBinding, Pokemo
                 is ResourceState.Success -> {
                     result.data?.let { values ->
                         binding.progressPokemonDetails.hide()
+                        movesAdapter.moves = values.moves.toList()
                         configName(values)
                         configAbilities(values)
                         configImageAndBackground(values)
@@ -534,6 +558,7 @@ class PokemonDetailsFragment: BaseFragment<FragmentPokemonDetailsBinding, Pokemo
                     .use(PicassoPalette.Profile.MUTED_LIGHT)
                     .intoBackground(binding.imagePokemonDetails)
                     .intoBackground(binding.mainConstraint)
+                    .intoBackground(binding.recyclerMoves)
             )
     }
 

@@ -83,8 +83,4 @@ class PokemonAdapter(): ListAdapter<ResultsModel, PokemonAdapter.PokemonListView
     fun setOnClickListener(listener: (ResultsModel) -> Unit) {
         onItemClickListener = listener
     }
-
-    fun getCharacterPosition(position: Int): ResultsModel {
-        return pokemons[position]
-    }
 }

@@ -35,4 +35,6 @@
     <string name="rock">rock</string>
     <string name="steel">steel</string>
     <string name="water">water</string>
+    <string name="move">Move</string>
+    <string name="moves">Moves</string>
 </resources>
