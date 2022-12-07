@@ -11,6 +11,7 @@ import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
+import java.lang.reflect.Type
 
 interface PokemonAPI {
 
@@ -19,6 +20,14 @@ interface PokemonAPI {
         @Query("limit") limit: Int? = null,
         @Query("offset") offset: Int? = null
     ): Response<PokemonListResponseModel>
+
+    @GET("type/{name}")
+    suspend fun recoverInfoByTypeName(
+        @Path(
+            value = "name",
+            encoded = true
+        ) typeName: String
+    ): Response<TypesResponseModel>
 
     @GET("move/{name}")
     suspend fun recoverMoveByName(

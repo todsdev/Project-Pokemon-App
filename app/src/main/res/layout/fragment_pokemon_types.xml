@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/custom_round_background"
+    android:backgroundTint="@color/black"
     android:backgroundTintMode="add"
     android:padding="10dp">
 

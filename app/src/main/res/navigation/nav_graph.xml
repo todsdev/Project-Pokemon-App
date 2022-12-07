@@ -32,7 +32,11 @@
         android:id="@+id/pokemonTypesFragment"
         android:name="com.tods.project_pokemon.ui.types.PokemonTypesFragment"
         android:label="PokemonTypesFragment"
-        tools:layout="@layout/fragment_pokemon_types"/>
+        tools:layout="@layout/fragment_pokemon_types">
+        <action
+            android:id="@+id/action_pokemonTypesFragment_to_typesResultFragment"
+            app:destination="@id/typesResultFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/pokemonDetailsFragment"
@@ -59,5 +63,15 @@
         <action
             android:id="@+id/action_pokemonMoveFragment_to_pokemonDetailsFragment"
             app:destination="@id/pokemonDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/typesResultFragment"
+        android:name="com.tods.project_pokemon.ui.type_result.TypesResultFragment"
+        android:label="TypesResultFragment"
+        tools:layout="@layout/fragment_type_result">
+        <argument
+            android:name="data"
+            app:argType="string" />
     </fragment>
 </navigation>

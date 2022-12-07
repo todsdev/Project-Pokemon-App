@@ -12,4 +12,5 @@ class PokemonRepository @Inject constructor(
     suspend fun recoverPokemonById(id: Int) = api.recoverPokemonById(id)
     suspend fun recoverPokemonByName(name: String) = api.recoverPokemonByName(name)
     suspend fun recoverMoveByName(name: String) = api.recoverMoveByName(name)
+    suspend fun recoverInfoByTypeName(name: String) = api.recoverInfoByTypeName(name)
 }
