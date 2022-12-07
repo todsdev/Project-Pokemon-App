@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.palette.graphics.Palette
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -42,6 +43,14 @@ class PokemonMoveFragment: BaseFragment<FragmentPokemonMoveBinding, PokemonMoveV
         configInitialSettings()
         configRecyclerView()
         configDataCollector()
+        configClickAdapter()
+    }
+
+    private fun configClickAdapter() {
+        pokemonNameAdapter.setOnClickListener { data ->
+            val action = PokemonMoveFragmentDirections.actionPokemonMoveFragmentToPokemonDetailsFragment(data.name)
+            findNavController().navigate(action)
+        }
     }
 
     private fun configRecyclerView() = with(binding) {

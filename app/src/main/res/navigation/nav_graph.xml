@@ -39,12 +39,12 @@
         android:name="com.tods.project_pokemon.ui.details.PokemonDetailsFragment"
         android:label="PokemonDetailsFragment"
         tools:layout="@layout/fragment_pokemon_details">
-        <argument
-            android:name="data"
-            app:argType="com.tods.project_pokemon.data.model.list.results.ResultsModel" />
         <action
             android:id="@+id/action_pokemonDetailsFragment_to_pokemonMoveFragment"
             app:destination="@id/pokemonMoveFragment" />
+        <argument
+            android:name="data"
+            app:argType="string" />
     </fragment>
 
     <fragment
@@ -56,5 +56,8 @@
         <argument
             android:name="data"
             app:argType="com.tods.project_pokemon.data.model.pokemons.moves.MovesModel" />
+        <action
+            android:id="@+id/action_pokemonMoveFragment_to_pokemonDetailsFragment"
+            app:destination="@id/pokemonDetailsFragment" />
     </fragment>
 </navigation>

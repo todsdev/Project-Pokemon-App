@@ -36,7 +36,6 @@ class PokemonDetailsFragment: BaseFragment<FragmentPokemonDetailsBinding, Pokemo
     override fun recoverViewBinding(inflater: LayoutInflater, container: ViewGroup?): FragmentPokemonDetailsBinding =
         FragmentPokemonDetailsBinding.inflate(inflater, container, false)
     private val args: PokemonDetailsFragmentArgs by navArgs()
-    private lateinit var results: ResultsModel
     private val movesAdapter by lazy { MoveAdapter() }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -561,7 +560,6 @@ class PokemonDetailsFragment: BaseFragment<FragmentPokemonDetailsBinding, Pokemo
     }
 
     private fun configInitialSettings() {
-        results = args.data
-        viewModel.fetch(results.name)
+        viewModel.fetch(args.data)
     }
 }

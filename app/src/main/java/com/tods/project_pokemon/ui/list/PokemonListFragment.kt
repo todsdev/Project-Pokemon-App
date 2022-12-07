@@ -37,7 +37,7 @@ class PokemonListFragment: BaseFragment<FragmentPokemonListBinding, PokemonListV
 
     private fun configClickAdapter() {
         pokemonListAdapter.setOnClickListener { data ->
-            val action = PokemonListFragmentDirections.actionPokemonListFragmentToPokemonDetailsFragment(data)
+            val action = PokemonListFragmentDirections.actionPokemonListFragmentToPokemonDetailsFragment(data.name)
             findNavController().navigate(action)
         }
     }
