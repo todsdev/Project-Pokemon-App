@@ -41,11 +41,13 @@ class PokemonAdapter(): ListAdapter<ResultsModel, PokemonAdapter.PokemonListView
     override fun onBindViewHolder(holder: PokemonListViewHolder, position: Int) {
         val pokemon = pokemons[position]
         holder.binding.apply {
-            textPokemonName.text = pokemon.name.replaceFirstChar {
+            textPokemonName.text = pokemon.name
+                .replaceFirstChar {
                 if (it.isLowerCase()) it.titlecase(
                     Locale.ROOT
                 ) else it.toString()
             }
+                .replace("-", " ")
             val url = pokemon.url.dropLast(1)
             val trimmedUrl = url.substring(url.lastIndexOf("/")+1).toInt()
             val doneUrl = "${Constants.BASE_IMAGE_URL}$trimmedUrl${Constants.END_IMAGE_URL}"

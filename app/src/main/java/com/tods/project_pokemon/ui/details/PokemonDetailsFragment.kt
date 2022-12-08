@@ -134,11 +134,13 @@ class PokemonDetailsFragment: BaseFragment<FragmentPokemonDetailsBinding, Pokemo
     }
 
     private fun configName(values: PokemonResponseModel) {
-        binding.textPokemonNameDetails.text = values.name.replaceFirstChar {
+        binding.textPokemonNameDetails.text = values.name
+            .replaceFirstChar {
             if (it.isLowerCase()) it.titlecase(
                 Locale.getDefault()
             ) else it.toString()
         }
+            .replace("-", " ")
     }
 
     private fun configAbilities(values: PokemonResponseModel) {
