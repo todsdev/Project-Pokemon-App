@@ -57,12 +57,12 @@
         android:label="PokemonMoveFragment"
         tools:layout="@layout/fragment_pokemon_move">
 
-        <argument
-            android:name="data"
-            app:argType="com.tods.project_pokemon.data.model.pokemons.moves.MovesModel" />
         <action
             android:id="@+id/action_pokemonMoveFragment_to_pokemonDetailsFragment"
             app:destination="@id/pokemonDetailsFragment" />
+        <argument
+            android:name="data"
+            app:argType="string" />
     </fragment>
 
     <fragment
@@ -73,5 +73,11 @@
         <argument
             android:name="data"
             app:argType="string" />
+        <action
+            android:id="@+id/action_typesResultFragment_to_pokemonDetailsFragment"
+            app:destination="@id/pokemonDetailsFragment" />
+        <action
+            android:id="@+id/action_typesResultFragment_to_pokemonMoveFragment"
+            app:destination="@id/pokemonMoveFragment" />
     </fragment>
 </navigation>

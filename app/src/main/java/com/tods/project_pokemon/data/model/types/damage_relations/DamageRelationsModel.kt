@@ -1,6 +1,12 @@
 package com.tods.project_pokemon.data.model.types.damage_relations
 
 import com.google.gson.annotations.SerializedName
+import com.tods.project_pokemon.data.model.types.damage_relations.double_damage.DoubleDamageFromModel
+import com.tods.project_pokemon.data.model.types.damage_relations.double_damage.DoubleDamageToModel
+import com.tods.project_pokemon.data.model.types.damage_relations.half_damage.HalfDamageFromModel
+import com.tods.project_pokemon.data.model.types.damage_relations.half_damage.HalfDamageToModel
+import com.tods.project_pokemon.data.model.types.damage_relations.no_damage.NoDamageFromModel
+import com.tods.project_pokemon.data.model.types.damage_relations.no_damage.NoDamageToModel
 
 data class DamageRelationsModel(
     @SerializedName("no_damage_to")

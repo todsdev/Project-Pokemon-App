@@ -48,7 +48,7 @@ class PokemonDetailsFragment: BaseFragment<FragmentPokemonDetailsBinding, Pokemo
 
     private fun configClickAdapter() {
         movesAdapter.setOnClickListener { data ->
-            val action = PokemonDetailsFragmentDirections.actionPokemonDetailsFragmentToPokemonMoveFragment(data)
+            val action = PokemonDetailsFragmentDirections.actionPokemonDetailsFragmentToPokemonMoveFragment(data.move.name)
             findNavController().navigate(action)
         }
     }

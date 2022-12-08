@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.squareup.picasso.Picasso
 import com.tods.project_pokemon.R
 import com.tods.project_pokemon.data.model.list.results.ResultsModel
+import com.tods.project_pokemon.data.model.moves.MovesResponseModel
 import com.tods.project_pokemon.data.model.pokemons.moves.MovesModel
 import com.tods.project_pokemon.databinding.FragmentPokemonMoveBinding
 import com.tods.project_pokemon.state.ResourceState
@@ -35,7 +36,6 @@ class PokemonMoveFragment: BaseFragment<FragmentPokemonMoveBinding, PokemonMoveV
     override fun recoverViewBinding(inflater: LayoutInflater, container: ViewGroup?): FragmentPokemonMoveBinding =
         FragmentPokemonMoveBinding.inflate(inflater, container, false)
     private val args: PokemonMoveFragmentArgs by navArgs()
-    private lateinit var results: MovesModel
     private val pokemonNameAdapter by lazy { PokemonNameAdapter() }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -96,81 +96,7 @@ class PokemonMoveFragment: BaseFragment<FragmentPokemonMoveBinding, PokemonMoveV
                             ) else it.toString()
                         }
                             .replace("-", " ")
-                        when(values.type.name) {
-                            getString(R.string.poison) -> {
-                                binding.imageType.setImageResource(R.drawable.ic_poison)
-                                binding.mainConstraintMoves.setBackgroundResource(R.color.poison_background)
-                            }
-                            getString(R.string.bug) -> {
-                                binding.imageType.setImageResource(R.drawable.ic_bug)
-                                binding.mainConstraintMoves.setBackgroundResource(R.color.bug_background)
-                            }
-                            getString(R.string.dark) -> {
-                                binding.imageType.setImageResource(R.drawable.ic_dark)
-                                binding.mainConstraintMoves.setBackgroundResource(R.color.dark_background)
-                            }
-                            getString(R.string.dragon) -> {
-                                binding.imageType.setImageResource(R.drawable.ic_dragon)
-                                binding.mainConstraintMoves.setBackgroundColor(R.color.dragon_background)
-                            }
-                            getString(R.string.electric) -> {
-                                binding.imageType.setImageResource(R.drawable.ic_electric)
-                                binding.mainConstraintMoves.setBackgroundResource(R.color.electric_background)
-                            }
-                            getString(R.string.fairy) -> {
-                                binding.imageType.setImageResource(R.drawable.ic_fairy)
-                                binding.mainConstraintMoves.setBackgroundResource(R.color.fairy_background)
-                            }
-                            getString(R.string.fighting) -> {
-                                binding.imageType.setImageResource(R.drawable.ic_fighting)
-                                binding.mainConstraintMoves.setBackgroundResource(R.color.fighting_background)
-                            }
-                            getString(R.string.fire) -> {
-                                binding.imageType.setImageResource(R.drawable.ic_fire)
-                                binding.mainConstraintMoves.setBackgroundResource(R.color.fire_background)
-                            }
-                            getString(R.string.flying) -> {
-                                binding.imageType.setImageResource(R.drawable.ic_flying)
-                                binding.mainConstraintMoves.setBackgroundResource(R.color.flying_background)
-                            }
-                            getString(R.string.ghost) -> {
-                                binding.imageType.setImageResource(R.drawable.ic_ghost)
-                                binding.mainConstraintMoves.setBackgroundResource(R.color.ghost_background)
-                            }
-                            getString(R.string.grass) -> {
-                                binding.imageType.setImageResource(R.drawable.ic_grass)
-                                binding.mainConstraintMoves.setBackgroundResource(R.color.grass_background)
-                            }
-                            getString(R.string.ground) -> {
-                                binding.imageType.setImageResource(R.drawable.ic_ground)
-                                binding.mainConstraintMoves.setBackgroundResource(R.color.ground_background)
-                            }
-                            getString(R.string.ice) -> {
-                                binding.imageType.setImageResource(R.drawable.ic_ice)
-                                binding.mainConstraintMoves.setBackgroundResource(R.color.ice_background)
-                            }
-                            getString(R.string.normal) -> {
-                                binding.imageType.setImageResource(R.drawable.ic_normal)
-                                binding.mainConstraintMoves.setBackgroundResource(R.color.normal_background)
-                            }
-                            getString(R.string.psychic) -> {
-                                binding.imageType.setImageResource(R.drawable.ic_psychic)
-                                binding.mainConstraintMoves.setBackgroundResource(R.color.psychic_background)
-                            }
-                            getString(R.string.rock) -> {
-                                binding.imageType.setImageResource(R.drawable.ic_rock)
-                                binding.mainConstraintMoves.setBackgroundResource(R.color.rock_background)
-                            }
-                            getString(R.string.steel) -> {
-                                binding.imageType.setImageResource(R.drawable.ic_steel)
-                                binding.mainConstraintMoves.setBackgroundResource(R.color.steel_background)
-                            }
-                            getString(R.string.water) -> {
-                                binding.imageType.setImageResource(R.drawable.ic_water)
-                                binding.mainConstraintMoves.setBackgroundResource(R.color.water_background)
-                            }
-                            else -> { }
-                        }
+                        configBackground(values)
                     }
                 }
                 is ResourceState.Error -> {
@@ -188,8 +114,85 @@ class PokemonMoveFragment: BaseFragment<FragmentPokemonMoveBinding, PokemonMoveV
         }
     }
 
+    private fun configBackground(values: MovesResponseModel) {
+        when (values.type.name) {
+            getString(R.string.poison) -> {
+                binding.imageType.setImageResource(R.drawable.ic_poison)
+                binding.mainConstraintMoves.setBackgroundResource(R.color.poison_background)
+            }
+            getString(R.string.bug) -> {
+                binding.imageType.setImageResource(R.drawable.ic_bug)
+                binding.mainConstraintMoves.setBackgroundResource(R.color.bug_background)
+            }
+            getString(R.string.dark) -> {
+                binding.imageType.setImageResource(R.drawable.ic_dark)
+                binding.mainConstraintMoves.setBackgroundResource(R.color.dark_background)
+            }
+            getString(R.string.dragon) -> {
+                binding.imageType.setImageResource(R.drawable.ic_dragon)
+                binding.mainConstraintMoves.setBackgroundColor(R.color.dragon_background)
+            }
+            getString(R.string.electric) -> {
+                binding.imageType.setImageResource(R.drawable.ic_electric)
+                binding.mainConstraintMoves.setBackgroundResource(R.color.electric_background)
+            }
+            getString(R.string.fairy) -> {
+                binding.imageType.setImageResource(R.drawable.ic_fairy)
+                binding.mainConstraintMoves.setBackgroundResource(R.color.fairy_background)
+            }
+            getString(R.string.fighting) -> {
+                binding.imageType.setImageResource(R.drawable.ic_fighting)
+                binding.mainConstraintMoves.setBackgroundResource(R.color.fighting_background)
+            }
+            getString(R.string.fire) -> {
+                binding.imageType.setImageResource(R.drawable.ic_fire)
+                binding.mainConstraintMoves.setBackgroundResource(R.color.fire_background)
+            }
+            getString(R.string.flying) -> {
+                binding.imageType.setImageResource(R.drawable.ic_flying)
+                binding.mainConstraintMoves.setBackgroundResource(R.color.flying_background)
+            }
+            getString(R.string.ghost) -> {
+                binding.imageType.setImageResource(R.drawable.ic_ghost)
+                binding.mainConstraintMoves.setBackgroundResource(R.color.ghost_background)
+            }
+            getString(R.string.grass) -> {
+                binding.imageType.setImageResource(R.drawable.ic_grass)
+                binding.mainConstraintMoves.setBackgroundResource(R.color.grass_background)
+            }
+            getString(R.string.ground) -> {
+                binding.imageType.setImageResource(R.drawable.ic_ground)
+                binding.mainConstraintMoves.setBackgroundResource(R.color.ground_background)
+            }
+            getString(R.string.ice) -> {
+                binding.imageType.setImageResource(R.drawable.ic_ice)
+                binding.mainConstraintMoves.setBackgroundResource(R.color.ice_background)
+            }
+            getString(R.string.normal) -> {
+                binding.imageType.setImageResource(R.drawable.ic_normal)
+                binding.mainConstraintMoves.setBackgroundResource(R.color.normal_background)
+            }
+            getString(R.string.psychic) -> {
+                binding.imageType.setImageResource(R.drawable.ic_psychic)
+                binding.mainConstraintMoves.setBackgroundResource(R.color.psychic_background)
+            }
+            getString(R.string.rock) -> {
+                binding.imageType.setImageResource(R.drawable.ic_rock)
+                binding.mainConstraintMoves.setBackgroundResource(R.color.rock_background)
+            }
+            getString(R.string.steel) -> {
+                binding.imageType.setImageResource(R.drawable.ic_steel)
+                binding.mainConstraintMoves.setBackgroundResource(R.color.steel_background)
+            }
+            getString(R.string.water) -> {
+                binding.imageType.setImageResource(R.drawable.ic_water)
+                binding.mainConstraintMoves.setBackgroundResource(R.color.water_background)
+            }
+            else -> {}
+        }
+    }
+
     private fun configInitialSettings() {
-        results = args.data
-        viewModel.fetch(results.move.name)
+        viewModel.fetch(args.data)
     }
 }

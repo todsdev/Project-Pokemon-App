@@ -46,4 +46,11 @@
     <string name="type_">Type:</string>
     <string name="effect_entries_">Effect entries:</string>
     <string name="target_">Target:</string>
+    <string name="moves_">Moves:</string>
+    <string name="double_damage_from_">Double damage from:</string>
+    <string name="half_damage_from_">Half damage from:</string>
+    <string name="no_damage_from_">No damage from:</string>
+    <string name="half_damage_to_">Half damage to:</string>
+    <string name="no_damage_to_">No damage to:</string>
+    <string name="double_damage_to_">Double damage to:</string>
 </resources>
