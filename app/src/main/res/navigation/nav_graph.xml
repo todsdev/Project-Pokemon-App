@@ -20,13 +20,21 @@
         android:id="@+id/pokemonFavoritesFragment"
         android:name="com.tods.project_pokemon.ui.favorites.PokemonFavoritesFragment"
         android:label="PokemonFavoritesFragment"
-        tools:layout="@layout/fragment_pokemon_favorites"/>
+        tools:layout="@layout/fragment_pokemon_favorites">
+        <action
+            android:id="@+id/action_pokemonFavoritesFragment_to_pokemonDetailsFragment"
+            app:destination="@id/pokemonDetailsFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/pokemonSearchFragment"
         android:name="com.tods.project_pokemon.ui.search.PokemonSearchFragment"
         android:label="PokemonSearchFragment"
-        tools:layout="@layout/fragment_pokemon_search"/>
+        tools:layout="@layout/fragment_pokemon_search">
+        <action
+            android:id="@+id/action_pokemonSearchFragment_to_pokemonDetailsFragment"
+            app:destination="@id/pokemonDetailsFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/pokemonTypesFragment"
