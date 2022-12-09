@@ -234,8 +234,8 @@ class PokemonDetailsFragment: BaseFragment<FragmentPokemonDetailsBinding, Pokemo
     private fun configIcons(values: PokemonResponseModel) {
         when (values.types.size) {
             1 -> {
-                binding.imageType2.isVisible = false
-                binding.imageType3.isVisible = false
+                binding.imageType2.hide()
+                binding.imageType3.hide()
                 when (values.types[0].type.name) {
                     getString(R.string.poison) -> {
                         binding.imageType1.setImageResource(R.drawable.ic_poison)
@@ -292,9 +292,14 @@ class PokemonDetailsFragment: BaseFragment<FragmentPokemonDetailsBinding, Pokemo
                         binding.imageType1.setImageResource(R.drawable.ic_water)
                     }
                 }
+                binding.imageType1.setOnClickListener {
+                    val action = PokemonDetailsFragmentDirections
+                        .actionPokemonDetailsFragmentToTypesResultFragment(values.types[0].type.name)
+                    findNavController().navigate(action)
+                }
             }
             2 -> {
-                binding.imageType3.isVisible = false
+                binding.imageType3.hide()
                 when (values.types[0].type.name) {
                     getString(R.string.poison) -> {
                         binding.imageType1.setImageResource(R.drawable.ic_poison)
@@ -406,6 +411,18 @@ class PokemonDetailsFragment: BaseFragment<FragmentPokemonDetailsBinding, Pokemo
                     getString(R.string.water) -> {
                         binding.imageType2.setImageResource(R.drawable.ic_water)
                     }
+                }
+                binding.imageType1.setOnClickListener {
+                    val action = PokemonDetailsFragmentDirections
+                        .actionPokemonDetailsFragmentToTypesResultFragment(values.types[0].type.name)
+                    findNavController().navigate(action)
+
+                }
+                binding.imageType2.setOnClickListener {
+                    val action = PokemonDetailsFragmentDirections
+                        .actionPokemonDetailsFragmentToTypesResultFragment(values.types[1].type.name)
+                    findNavController().navigate(action)
+
                 }
             }
             3 -> {
@@ -576,6 +593,23 @@ class PokemonDetailsFragment: BaseFragment<FragmentPokemonDetailsBinding, Pokemo
                     getString(R.string.water) -> {
                         binding.imageType3.setImageResource(R.drawable.ic_water)
                     }
+                }
+                binding.imageType1.setOnClickListener {
+                    val action = PokemonDetailsFragmentDirections
+                        .actionPokemonDetailsFragmentToTypesResultFragment(values.types[0].type.name)
+                    findNavController().navigate(action)
+                }
+                binding.imageType2.setOnClickListener {
+                    val action = PokemonDetailsFragmentDirections
+                        .actionPokemonDetailsFragmentToTypesResultFragment(values.types[1].type.name)
+                    findNavController().navigate(action)
+
+                }
+                binding.imageType3.setOnClickListener {
+                    val action = PokemonDetailsFragmentDirections
+                        .actionPokemonDetailsFragmentToTypesResultFragment(values.types[2].type.name)
+                    findNavController().navigate(action)
+
                 }
             }
             else -> {

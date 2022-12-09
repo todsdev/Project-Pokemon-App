@@ -60,6 +60,9 @@
         <action
             android:id="@+id/action_pokemonDetailsFragment_to_pokemonAbilityFragment"
             app:destination="@id/pokemonAbilityFragment" />
+        <action
+            android:id="@+id/action_pokemonDetailsFragment_to_typesResultFragment"
+            app:destination="@id/typesResultFragment" />
     </fragment>
 
     <fragment
