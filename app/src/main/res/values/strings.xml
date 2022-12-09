@@ -53,4 +53,9 @@
     <string name="half_damage_to_">Half damage to:</string>
     <string name="no_damage_to_">No damage to:</string>
     <string name="double_damage_to_">Double damage to:</string>
+    <string name="favorite_question">Do you really want to favorite this Pokémon?</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="favorite_success">Pokémon included to your favorite list</string>
+    <string name="no_favorites_yet">No favorites yet</string>
 </resources>

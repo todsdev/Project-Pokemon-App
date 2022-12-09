@@ -46,8 +46,7 @@ class PokemonAdapter(): ListAdapter<ResultsModel, PokemonAdapter.PokemonListView
                 if (it.isLowerCase()) it.titlecase(
                     Locale.ROOT
                 ) else it.toString()
-            }
-                .replace("-", " ")
+            }.replace("-", " ")
             val url = pokemon.url.dropLast(1)
             val trimmedUrl = url.substring(url.lastIndexOf("/")+1).toInt()
             val doneUrl = "${Constants.BASE_IMAGE_URL}$trimmedUrl${Constants.END_IMAGE_URL}"

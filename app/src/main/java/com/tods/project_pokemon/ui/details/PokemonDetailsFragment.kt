@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.github.florent37.picassopalette.PicassoPalette
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.squareup.picasso.Picasso
 import com.synnapps.carouselview.ImageListener
 import com.tods.project_pokemon.R
@@ -44,6 +45,20 @@ class PokemonDetailsFragment: BaseFragment<FragmentPokemonDetailsBinding, Pokemo
         configDataCollection()
         configRecyclerView()
         configClickAdapter()
+    //    configClickButtons()
+    }
+
+    private fun configClickButtons() = with(binding) {
+        imageFavorite.setOnClickListener {
+            MaterialAlertDialogBuilder(requireContext())
+                .setTitle(args.data.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.ROOT) else it.toString() })
+                .setMessage(getString(R.string.favorite_question))
+                .setNegativeButton(getString(R.string.cancel)) { dialog, _ ->
+                    dialog.dismiss()
+                }.setPositiveButton(getString(R.string.confirm)) { _, _ ->
+    //                viewModel.insert(args.data)
+                }.show()
+        }
     }
 
     private fun configClickAdapter() {
@@ -73,6 +88,21 @@ class PokemonDetailsFragment: BaseFragment<FragmentPokemonDetailsBinding, Pokemo
                         configIcons(values)
                         configStats(values)
                         configCarousel(values)
+                        binding.imageFavorite.setOnClickListener {
+                            MaterialAlertDialogBuilder(requireContext())
+                                .setTitle(values.name.replaceFirstChar {
+                                    if (it.isLowerCase()) it.titlecase(
+                                        Locale.ROOT
+                                    ) else it.toString()
+                                })
+                                .setMessage(getString(R.string.favorite_question))
+                                .setNegativeButton(getString(R.string.cancel)) { dialog, _ ->
+                                    dialog.dismiss()
+                                }.setPositiveButton(getString(R.string.confirm)) { _, _ ->
+                                    viewModel.insert(values)
+                                    toast(getString(R.string.favorite_success))
+                                }.show()
+                        }
                     }
                 }
                 is ResourceState.Error -> {
@@ -92,30 +122,32 @@ class PokemonDetailsFragment: BaseFragment<FragmentPokemonDetailsBinding, Pokemo
 
     private fun configCarousel(values: PokemonResponseModel) {
         val imageList = mutableListOf<String>()
-        if (values.sprites.front_default.isNotEmpty()) {
+        if (!values.sprites.front_default.isNullOrEmpty()) {
             imageList.add(values.sprites.front_default)
         }
-        if (values.sprites.back_default.isNotEmpty()) {
+        if (!values.sprites.back_default.isNullOrEmpty()) {
             imageList.add(values.sprites.back_default)
         }
-        if (values.sprites.front_shiny.isNotEmpty()) {
+        if (!values.sprites.front_shiny.isNullOrEmpty()) {
             imageList.add(values.sprites.front_shiny)
         }
-        if (values.sprites.back_shiny.isNotEmpty()) {
+        if (!values.sprites.back_shiny.isNullOrEmpty()) {
             imageList.add(values.sprites.back_shiny)
         }
-        if (values.sprites.other.home.front_default.isNotEmpty()) {
+        if (!values.sprites.other.home.front_default.isNullOrEmpty()) {
             imageList.add(values.sprites.other.home.front_default)
         }
-        if (values.sprites.other.home.front_shiny.isNotEmpty()) {
+        if (!values.sprites.other.home.front_shiny.isNullOrEmpty()) {
             imageList.add(values.sprites.other.home.front_shiny)
         }
         val imageListener: ImageListener = ImageListener { position, imageView ->
             val url = imageList[position]
             Picasso.get().load(url).into(imageView)
         }
-        binding.carouselView.setImageListener(imageListener)
-        binding.carouselView.pageCount = imageList.size
+        if(imageList.isNotEmpty()) {
+            binding.carouselView.setImageListener(imageListener)
+            binding.carouselView.pageCount = imageList.size
+        }
     }
 
     private fun configStats(values: PokemonResponseModel) {
@@ -146,8 +178,6 @@ class PokemonDetailsFragment: BaseFragment<FragmentPokemonDetailsBinding, Pokemo
     private fun configAbilities(values: PokemonResponseModel) {
         when (values.abilities.size) {
             1 -> {
-                binding.textAbility2.isVisible = false
-                binding.textAbility3.isVisible = false
                 binding.textAbility1.text = values.abilities[0].ability.name.replaceFirstChar {
                     if (it.isLowerCase()) it.titlecase(
                         Locale.getDefault()
@@ -155,7 +185,6 @@ class PokemonDetailsFragment: BaseFragment<FragmentPokemonDetailsBinding, Pokemo
                 }
             }
             2 -> {
-                binding.textAbility3.isVisible = false
                 binding.textAbility1.text = values.abilities[0].ability.name.replaceFirstChar {
                     if (it.isLowerCase()) it.titlecase(
                         Locale.getDefault()
@@ -184,11 +213,7 @@ class PokemonDetailsFragment: BaseFragment<FragmentPokemonDetailsBinding, Pokemo
                     ) else it.toString()
                 }
             }
-            else -> {
-                binding.textAbility1.isVisible = false
-                binding.textAbility2.isVisible = false
-                binding.textAbility3.isVisible = false
-            }
+            else -> { }
         }
     }
 

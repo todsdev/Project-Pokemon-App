@@ -234,21 +234,20 @@
                 android:id="@+id/textView2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/abilities"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textCountDefense"
-                app:layout_constraintTop_toBottomOf="@+id/textPokemonNameDetails" />
+                app:layout_constraintTop_toBottomOf="@+id/imageFavorite" />
 
             <TextView
                 android:id="@+id/textAbility1"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="@string/ability"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="16sp"
@@ -262,7 +261,6 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="@string/ability"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="16sp"
@@ -277,7 +275,6 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="@string/ability"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="16sp"
@@ -291,13 +288,13 @@
                 android:id="@+id/textView6"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/stats"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textPokemonNameDetails" />
+                app:layout_constraintTop_toBottomOf="@+id/imageFavorite" />
 
             <ProgressBar
                 android:id="@+id/progressHp"
@@ -417,6 +414,26 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textCountDefense"
                 app:layout_constraintTop_toBottomOf="@+id/progressDefense" />
+
+            <ImageView
+                android:id="@+id/imageFavorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textPokemonNameDetails"
+                app:srcCompat="@drawable/ic_favorite_border_24" />
+
+            <ImageView
+                android:id="@+id/imageMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toEndOf="@+id/imageFavorite"
+                app:layout_constraintTop_toBottomOf="@+id/textPokemonNameDetails"
+                app:srcCompat="@drawable/ic_add_border_24" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

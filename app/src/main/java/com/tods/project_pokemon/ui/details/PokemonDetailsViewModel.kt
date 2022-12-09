@@ -3,6 +3,7 @@ package com.tods.project_pokemon.ui.details
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.tods.project_pokemon.data.model.list.PokemonListResponseModel
+import com.tods.project_pokemon.data.model.list.results.ResultsModel
 import com.tods.project_pokemon.data.model.pokemons.PokemonResponseModel
 import com.tods.project_pokemon.repository.PokemonRepository
 import com.tods.project_pokemon.state.ResourceState
@@ -43,5 +44,9 @@ class PokemonDetailsViewModel @Inject constructor(private val repository: Pokemo
             }
         }
         return ResourceState.Error(response.message())
+    }
+
+    fun insert(pokemon: PokemonResponseModel) = viewModelScope.launch {
+        repository.insert(pokemon)
     }
 }

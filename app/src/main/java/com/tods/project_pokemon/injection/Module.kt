@@ -2,8 +2,10 @@ package com.tods.project_pokemon.injection
 
 import android.content.Context
 import androidx.room.Room
+import com.tods.project_pokemon.data.local.PokemonDatabase
 import com.tods.project_pokemon.data.remote.PokemonAPI
 import com.tods.project_pokemon.util.Constants
+import com.tods.project_pokemon.util.Constants.DATABASE_NAME
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -22,6 +24,16 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object Module {
+
+    @Singleton
+    @Provides
+    fun providePokemonDatabase(
+        @ApplicationContext context: Context
+    ) = Room.databaseBuilder(context, PokemonDatabase::class.java, DATABASE_NAME).build()
+
+    @Singleton
+    @Provides
+    fun provideMarvelDao(database: PokemonDatabase) = database.pokemonDao()
 
     @Singleton
     @Provides

@@ -9,4 +9,5 @@ object Constants {
     const val MAX_RESULTS = 1154
     const val LAST_SEARCH_QUERY = "last_search_query"
     const val DEFAULT_QUERY = ""
+    const val DATABASE_NAME = "pokemon.database"
 }
