@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.tods.project_pokemon.data.model.moves.learned_by.LearnedByPokemonModel
+import com.tods.project_pokemon.data.model.moves.learnedby.LearnedByPokemonModel
 import com.tods.project_pokemon.databinding.ItemPokemonNameBinding
 import java.util.*
 

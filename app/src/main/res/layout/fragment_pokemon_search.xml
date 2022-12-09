@@ -5,9 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/custom_round_background"
-    android:backgroundTint="@color/black"
-    android:backgroundTintMode="add">
+    android:background="@color/black"
+    android:padding="10dp">
 
     <ProgressBar
         android:id="@+id/progressSearchPokemon"
@@ -33,11 +32,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editSearchPokemon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Search one pokémon:"
+            android:hint="@string/search_one_pok_mon"
             android:imeOptions="actionSearch"
             android:inputType="textNoSuggestions"
             android:selectAllOnFocus="true"
@@ -50,6 +50,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="10dp"
+        android:padding="10dp"
+        tools:listitem="@layout/item_pokemon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

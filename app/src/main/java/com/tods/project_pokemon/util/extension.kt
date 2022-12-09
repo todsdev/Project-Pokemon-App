@@ -5,6 +5,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
+import java.util.*
 
 fun Fragment.toast(message: String, duration: Int = Toast.LENGTH_SHORT) {
     Toast.makeText(requireContext(), message, duration).show()
@@ -16,12 +17,4 @@ fun View.show() {
 
 fun View.hide() {
     visibility = View.INVISIBLE
-}
-
-fun String.limitedDescription(characters: Int): String {
-    if (this.length > characters) {
-        val firstCharacter = 0
-        return this.substring(firstCharacter, characters)
-    }
-    return this
 }

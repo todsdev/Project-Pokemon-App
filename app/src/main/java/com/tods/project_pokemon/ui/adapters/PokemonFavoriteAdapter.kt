@@ -2,18 +2,14 @@ package com.tods.project_pokemon.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.view.isVisible
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.github.florent37.picassopalette.PicassoPalette
 import com.squareup.picasso.Picasso
-import com.tods.project_pokemon.R
-import com.tods.project_pokemon.data.model.moves.learned_by.LearnedByPokemonModel
 import com.tods.project_pokemon.data.model.pokemons.PokemonResponseModel
 import com.tods.project_pokemon.databinding.ItemFavoritePokemonBinding
-import com.tods.project_pokemon.databinding.ItemPokemonNameBinding
 import java.util.*
 
 class PokemonFavoriteAdapter(): ListAdapter<PokemonResponseModel, PokemonFavoriteAdapter.PokemonFavoriteViewHolder>(ItemDiff()) {

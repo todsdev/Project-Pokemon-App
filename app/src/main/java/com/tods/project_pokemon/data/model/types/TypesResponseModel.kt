@@ -1,7 +1,7 @@
 package com.tods.project_pokemon.data.model.types
 
 import com.google.gson.annotations.SerializedName
-import com.tods.project_pokemon.data.model.types.damage_relations.DamageRelationsModel
+import com.tods.project_pokemon.data.model.types.damagerelations.DamageRelationsModel
 import com.tods.project_pokemon.data.model.types.moves.MovesTypesModel
 import com.tods.project_pokemon.data.model.types.pokemon.PokemonModel
 import java.io.Serializable

@@ -1,4 +1,4 @@
-package com.tods.project_pokemon.data.model.moves.damage_class
+package com.tods.project_pokemon.data.model.moves.damageclass
 
 import com.google.gson.annotations.SerializedName
 

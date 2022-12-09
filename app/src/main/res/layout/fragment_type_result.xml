@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainConstraintTypeResult"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/custom_round_background"
     android:padding="10dp">
 
 
@@ -18,7 +16,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textNdf4"
         app:layout_constraintTop_toBottomOf="@+id/textNdf2" />
 
@@ -30,7 +29,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textNdf5"
         app:layout_constraintTop_toBottomOf="@+id/textNdf3" />
 
@@ -43,7 +43,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textNdf2"
         app:layout_constraintTop_toBottomOf="@+id/textNdt7" />
 
@@ -56,7 +57,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textNdf1"
         app:layout_constraintTop_toBottomOf="@+id/textNdt7" />
 
@@ -68,7 +70,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textView18"
         app:layout_constraintTop_toBottomOf="@+id/textNdf4" />
 
@@ -80,7 +83,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textView18"
         app:layout_constraintTop_toBottomOf="@+id/textNdf1" />
 
@@ -93,7 +97,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textView18"
         app:layout_constraintTop_toBottomOf="@+id/textNdt7" />
 
@@ -105,7 +110,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textNdt5"
         app:layout_constraintTop_toBottomOf="@+id/textNdt3" />
 
@@ -118,7 +124,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textNdt2"
         app:layout_constraintTop_toBottomOf="@+id/textHdf7" />
 
@@ -130,7 +137,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textView14"
         app:layout_constraintTop_toBottomOf="@+id/textNdt4" />
 
@@ -142,7 +150,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textView14"
         app:layout_constraintTop_toBottomOf="@+id/textNdt1" />
 
@@ -154,7 +163,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textNdt4"
         app:layout_constraintTop_toBottomOf="@+id/textNdt2" />
 
@@ -167,7 +177,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textNdt1"
         app:layout_constraintTop_toBottomOf="@+id/textHdf7" />
 
@@ -180,7 +191,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textView14"
         app:layout_constraintTop_toBottomOf="@+id/textHdf7" />
 
@@ -192,7 +204,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textHdf5"
         app:layout_constraintTop_toBottomOf="@+id/textHdf3" />
 
@@ -205,7 +218,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textHdf2"
         app:layout_constraintTop_toBottomOf="@+id/textHdt7" />
 
@@ -217,7 +231,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textHdf4"
         app:layout_constraintTop_toBottomOf="@+id/textHdf2" />
 
@@ -230,7 +245,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textHdf1"
         app:layout_constraintTop_toBottomOf="@+id/textHdt7" />
 
@@ -242,7 +258,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textView17"
         app:layout_constraintTop_toBottomOf="@+id/textHdf4" />
 
@@ -254,7 +271,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textView17"
         app:layout_constraintTop_toBottomOf="@+id/textHdf1" />
 
@@ -267,7 +285,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textView17"
         app:layout_constraintTop_toBottomOf="@+id/textHdt7" />
 
@@ -279,7 +298,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textHdt5"
         app:layout_constraintTop_toBottomOf="@+id/textHdt3" />
 
@@ -291,7 +311,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textHdt4"
         app:layout_constraintTop_toBottomOf="@+id/textHdt2" />
 
@@ -304,7 +325,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textHdt2"
         app:layout_constraintTop_toBottomOf="@+id/textDdf7" />
 
@@ -317,7 +339,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textHdt1"
         app:layout_constraintTop_toBottomOf="@+id/textDdf7" />
 
@@ -329,7 +352,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textView22"
         app:layout_constraintTop_toBottomOf="@+id/textHdt4" />
 
@@ -341,7 +365,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textView22"
         app:layout_constraintTop_toBottomOf="@+id/textHdt1" />
 
@@ -354,7 +379,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textView22"
         app:layout_constraintTop_toBottomOf="@+id/textDdf7" />
 
@@ -366,7 +392,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textView16"
         app:layout_constraintTop_toBottomOf="@+id/textDdf4" />
 
@@ -378,7 +405,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textDdf5"
         app:layout_constraintTop_toBottomOf="@+id/textDdf3" />
 
@@ -390,7 +418,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textDdf4"
         app:layout_constraintTop_toBottomOf="@+id/textDdf2" />
 
@@ -402,7 +431,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textView16"
         app:layout_constraintTop_toBottomOf="@+id/textDdf1" />
 
@@ -415,7 +445,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textDdf2"
         app:layout_constraintTop_toBottomOf="@+id/textDdt7" />
 
@@ -428,7 +459,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textDdf1"
         app:layout_constraintTop_toBottomOf="@+id/textDdt7" />
 
@@ -441,7 +473,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textView16"
         app:layout_constraintTop_toBottomOf="@+id/textDdt7" />
 
@@ -453,7 +486,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textView12"
         app:layout_constraintTop_toBottomOf="@+id/textDdt4" />
 
@@ -465,7 +499,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textDdt5"
         app:layout_constraintTop_toBottomOf="@+id/textDdt3" />
 
@@ -477,7 +512,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textDdt4"
         app:layout_constraintTop_toBottomOf="@+id/textDdt2" />
 
@@ -489,7 +525,8 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textView12"
         app:layout_constraintTop_toBottomOf="@+id/textDdt1" />
 
@@ -498,12 +535,13 @@
         android:layout_width="80dp"
         android:layout_height="15dp"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="50dp"
         android:gravity="center"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textDdt1"
         app:layout_constraintTop_toBottomOf="@+id/textTypeResults" />
 
@@ -512,11 +550,12 @@
         android:layout_width="80dp"
         android:layout_height="15dp"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="50dp"
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textDdt2"
         app:layout_constraintTop_toBottomOf="@+id/textTypeResults" />
 
@@ -524,23 +563,24 @@
         android:id="@+id/progressTypeResults"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         android:indeterminateTint="@color/yellow"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView25"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/alegreya_sc"
         android:text="@string/pokemons_"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
@@ -549,10 +589,12 @@
         android:id="@+id/textView26"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/alegreya_sc"
         android:text="@string/moves_"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView25"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -562,6 +604,7 @@
         android:layout_width="120dp"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/alegreya_sc"
         android:text="@string/double_damage_from_"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -575,6 +618,7 @@
         android:layout_width="120dp"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/alegreya_sc"
         android:text="@string/half_damage_from_"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -588,6 +632,7 @@
         android:layout_width="120dp"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/alegreya_sc"
         android:text="@string/no_damage_from_"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -601,6 +646,7 @@
         android:layout_width="120dp"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/alegreya_sc"
         android:text="@string/half_damage_to_"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -614,6 +660,7 @@
         android:layout_width="120dp"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/alegreya_sc"
         android:gravity="center"
         android:text="@string/no_damage_to_"
         android:textAlignment="center"
@@ -634,14 +681,16 @@
 
     <TextView
         android:id="@+id/textTypeResults"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:fontFamily="@font/alegreya_sc"
         android:text="@string/types"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="32sp"
+        android:textSize="48sp"
+        android:textAllCaps="true"
         android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/imageTypeResults"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageTypeResults"
         app:layout_constraintTop_toTopOf="parent" />
@@ -651,7 +700,8 @@
         android:id="@+id/textView12"
         android:layout_width="120dp"
         android:layout_height="45dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/alegreya_sc"
         android:gravity="center"
         android:text="@string/double_damage_to_"
         android:textAlignment="center"
@@ -664,8 +714,6 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/custom_round_background"
         android:orientation="horizontal"
         android:padding="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -677,13 +725,17 @@
             android:id="@+id/recyclerPokemons"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="0.5" />
+            android:layout_weight="0.6"
+            android:padding="10dp"
+            tools:listitem="@layout/item_pokemon_name" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerMoves"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:padding="10dp"
+            tools:listitem="@layout/item_move" />
     </LinearLayout>
 
     <TextView
@@ -691,11 +743,12 @@
         android:layout_width="80dp"
         android:layout_height="15dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="50dp"
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textAllCaps="true"
         app:layout_constraintStart_toEndOf="@+id/textView12"
         app:layout_constraintTop_toBottomOf="@+id/textTypeResults" />
 

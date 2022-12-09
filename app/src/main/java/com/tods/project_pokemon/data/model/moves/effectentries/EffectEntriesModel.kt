@@ -1,4 +1,4 @@
-package com.tods.project_pokemon.data.model.moves.effect_entries
+package com.tods.project_pokemon.data.model.moves.effectentries
 
 import com.google.gson.annotations.SerializedName
 

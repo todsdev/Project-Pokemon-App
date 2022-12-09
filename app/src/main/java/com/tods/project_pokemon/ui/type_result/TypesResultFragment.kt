@@ -95,7 +95,7 @@ class TypesResultFragment: BaseFragment<FragmentTypeResultBinding, TypesResultVi
         when (values.damage_relations.double_damage_to.size) {
             0 -> {}
             1 -> {
-                binding.textDdt1.text =
+                binding.textDdt3.text =
                     values.damage_relations.double_damage_to[0].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
@@ -103,13 +103,13 @@ class TypesResultFragment: BaseFragment<FragmentTypeResultBinding, TypesResultVi
                     }
             }
             2 -> {
-                binding.textDdt1.text =
+                binding.textDdt3.text =
                     values.damage_relations.double_damage_to[0].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
                         ) else it.toString()
                     }
-                binding.textDdt2.text =
+                binding.textDdt4.text =
                     values.damage_relations.double_damage_to[1].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
@@ -117,19 +117,19 @@ class TypesResultFragment: BaseFragment<FragmentTypeResultBinding, TypesResultVi
                     }
             }
             3 -> {
-                binding.textDdt1.text =
+                binding.textDdt4.text =
                     values.damage_relations.double_damage_to[0].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
                         ) else it.toString()
                     }
-                binding.textDdt2.text =
+                binding.textDdt5.text =
                     values.damage_relations.double_damage_to[1].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
                         ) else it.toString()
                     }
-                binding.textDdt3.text =
+                binding.textDdt6.text =
                     values.damage_relations.double_damage_to[2].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
@@ -280,7 +280,7 @@ class TypesResultFragment: BaseFragment<FragmentTypeResultBinding, TypesResultVi
         when (values.damage_relations.double_damage_from.size) {
             0 -> {}
             1 -> {
-                binding.textDdf1.text =
+                binding.textDdf4.text =
                     values.damage_relations.double_damage_from[0].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
@@ -288,13 +288,13 @@ class TypesResultFragment: BaseFragment<FragmentTypeResultBinding, TypesResultVi
                     }
             }
             2 -> {
-                binding.textDdf1.text =
+                binding.textDdf4.text =
                     values.damage_relations.double_damage_from[0].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
                         ) else it.toString()
                     }
-                binding.textDdf2.text =
+                binding.textDdf5.text =
                     values.damage_relations.double_damage_from[1].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
@@ -302,19 +302,19 @@ class TypesResultFragment: BaseFragment<FragmentTypeResultBinding, TypesResultVi
                     }
             }
             3 -> {
-                binding.textDdf1.text =
+                binding.textDdf4.text =
                     values.damage_relations.double_damage_from[0].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
                         ) else it.toString()
                     }
-                binding.textDdf2.text =
+                binding.textDdf5.text =
                     values.damage_relations.double_damage_from[1].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
                         ) else it.toString()
                     }
-                binding.textDdf3.text =
+                binding.textDdf6.text =
                     values.damage_relations.double_damage_from[2].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
@@ -465,7 +465,7 @@ class TypesResultFragment: BaseFragment<FragmentTypeResultBinding, TypesResultVi
         when (values.damage_relations.half_damage_to.size) {
             0 -> {}
             1 -> {
-                binding.textHdt1.text =
+                binding.textHdt4.text =
                     values.damage_relations.half_damage_to[0].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
@@ -473,13 +473,13 @@ class TypesResultFragment: BaseFragment<FragmentTypeResultBinding, TypesResultVi
                     }
             }
             2 -> {
-                binding.textHdt1.text =
+                binding.textHdt4.text =
                     values.damage_relations.half_damage_to[0].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
                         ) else it.toString()
                     }
-                binding.textHdt2.text =
+                binding.textHdt5.text =
                     values.damage_relations.half_damage_to[1].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
@@ -487,19 +487,19 @@ class TypesResultFragment: BaseFragment<FragmentTypeResultBinding, TypesResultVi
                     }
             }
             3 -> {
-                binding.textHdt1.text =
+                binding.textHdt4.text =
                     values.damage_relations.half_damage_to[0].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
                         ) else it.toString()
                     }
-                binding.textHdt2.text =
+                binding.textHdt5.text =
                     values.damage_relations.half_damage_to[1].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
                         ) else it.toString()
                     }
-                binding.textHdt3.text =
+                binding.textHdt6.text =
                     values.damage_relations.half_damage_to[2].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
@@ -650,7 +650,7 @@ class TypesResultFragment: BaseFragment<FragmentTypeResultBinding, TypesResultVi
         when (values.damage_relations.half_damage_from.size) {
             0 -> {}
             1 -> {
-                binding.textHdf1.text =
+                binding.textHdf4.text =
                     values.damage_relations.half_damage_from[0].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
@@ -658,13 +658,13 @@ class TypesResultFragment: BaseFragment<FragmentTypeResultBinding, TypesResultVi
                     }
             }
             2 -> {
-                binding.textHdf1.text =
+                binding.textHdf4.text =
                     values.damage_relations.half_damage_from[0].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
                         ) else it.toString()
                     }
-                binding.textHdf2.text =
+                binding.textHdf5.text =
                     values.damage_relations.half_damage_from[1].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
@@ -672,19 +672,19 @@ class TypesResultFragment: BaseFragment<FragmentTypeResultBinding, TypesResultVi
                     }
             }
             3 -> {
-                binding.textHdf1.text =
+                binding.textHdf4.text =
                     values.damage_relations.half_damage_from[0].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
                         ) else it.toString()
                     }
-                binding.textHdf2.text =
+                binding.textHdf5.text =
                     values.damage_relations.half_damage_from[1].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
                         ) else it.toString()
                     }
-                binding.textHdf3.text =
+                binding.textHdf6.text =
                     values.damage_relations.half_damage_from[2].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
@@ -835,7 +835,7 @@ class TypesResultFragment: BaseFragment<FragmentTypeResultBinding, TypesResultVi
         when (values.damage_relations.no_damage_to.size) {
             0 -> {}
             1 -> {
-                binding.textNdt1.text =
+                binding.textNdt4.text =
                     values.damage_relations.no_damage_to[0].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
@@ -843,13 +843,13 @@ class TypesResultFragment: BaseFragment<FragmentTypeResultBinding, TypesResultVi
                     }
             }
             2 -> {
-                binding.textNdt1.text =
+                binding.textNdt4.text =
                     values.damage_relations.no_damage_to[0].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
                         ) else it.toString()
                     }
-                binding.textNdt2.text =
+                binding.textNdt5.text =
                     values.damage_relations.no_damage_to[1].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
@@ -857,7 +857,7 @@ class TypesResultFragment: BaseFragment<FragmentTypeResultBinding, TypesResultVi
                     }
             }
             3 -> {
-                binding.textNdt1.text =
+                binding.textNdt6.text =
                     values.damage_relations.no_damage_to[0].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
@@ -1020,7 +1020,7 @@ class TypesResultFragment: BaseFragment<FragmentTypeResultBinding, TypesResultVi
         when (values.damage_relations.no_damage_from.size) {
             0 -> {}
             1 -> {
-                binding.textNdf1.text =
+                binding.textNdf4.text =
                     values.damage_relations.no_damage_from[0].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
@@ -1028,13 +1028,13 @@ class TypesResultFragment: BaseFragment<FragmentTypeResultBinding, TypesResultVi
                     }
             }
             2 -> {
-                binding.textNdf1.text =
+                binding.textNdf4.text =
                     values.damage_relations.no_damage_from[0].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
                         ) else it.toString()
                     }
-                binding.textNdf2.text =
+                binding.textNdf5.text =
                     values.damage_relations.no_damage_from[1].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
@@ -1042,19 +1042,19 @@ class TypesResultFragment: BaseFragment<FragmentTypeResultBinding, TypesResultVi
                     }
             }
             3 -> {
-                binding.textNdf1.text =
+                binding.textNdf4.text =
                     values.damage_relations.no_damage_from[0].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
                         ) else it.toString()
                     }
-                binding.textNdf2.text =
+                binding.textNdf5.text =
                     values.damage_relations.no_damage_from[1].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()
                         ) else it.toString()
                     }
-                binding.textNdf3.text =
+                binding.textNdf6.text =
                     values.damage_relations.no_damage_from[2].name.replaceFirstChar {
                         if (it.isLowerCase()) it.titlecase(
                             Locale.getDefault()

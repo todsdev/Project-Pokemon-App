@@ -1,12 +1,11 @@
 package com.tods.project_pokemon.data.model.moves
 
 import com.google.gson.annotations.SerializedName
-import com.tods.project_pokemon.data.model.moves.damage_class.DamageClassModel
-import com.tods.project_pokemon.data.model.moves.effect_entries.EffectEntriesModel
-import com.tods.project_pokemon.data.model.moves.learned_by.LearnedByPokemonModel
+import com.tods.project_pokemon.data.model.moves.damageclass.DamageClassModel
+import com.tods.project_pokemon.data.model.moves.effectentries.EffectEntriesModel
+import com.tods.project_pokemon.data.model.moves.learnedby.LearnedByPokemonModel
 import com.tods.project_pokemon.data.model.moves.target.TargetModel
 import com.tods.project_pokemon.data.model.moves.type.TypeMovesModel
-import dagger.multibindings.IntoMap
 import java.io.Serializable
 
 data class MovesResponseModel(

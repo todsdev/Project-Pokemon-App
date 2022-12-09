@@ -1,4 +1,4 @@
-package com.tods.project_pokemon.data.model.types.damage_relations.half_damage
+package com.tods.project_pokemon.data.model.types.damagerelations.halfdamage
 
 import com.google.gson.annotations.SerializedName
 
