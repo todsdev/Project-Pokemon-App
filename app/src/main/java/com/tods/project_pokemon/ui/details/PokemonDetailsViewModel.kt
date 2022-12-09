@@ -10,6 +10,7 @@ import com.tods.project_pokemon.state.ResourceState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import retrofit2.Response
 import java.io.IOException
@@ -48,5 +49,9 @@ class PokemonDetailsViewModel @Inject constructor(private val repository: Pokemo
 
     fun insert(pokemon: PokemonResponseModel) = viewModelScope.launch {
         repository.insert(pokemon)
+    }
+
+    fun delete(pokemon: PokemonResponseModel) = viewModelScope.launch {
+        repository.delete(pokemon)
     }
 }

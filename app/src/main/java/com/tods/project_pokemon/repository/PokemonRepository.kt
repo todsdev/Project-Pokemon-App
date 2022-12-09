@@ -13,10 +13,10 @@ class PokemonRepository @Inject constructor(
 ) {
 
     suspend fun list() = api.list(Constants.MAX_RESULTS)
-    suspend fun recoverPokemonById(id: Int) = api.recoverPokemonById(id)
     suspend fun recoverPokemonByName(name: String) = api.recoverPokemonByName(name)
     suspend fun recoverMoveByName(name: String) = api.recoverMoveByName(name)
     suspend fun recoverInfoByTypeName(name: String) = api.recoverInfoByTypeName(name)
+    suspend fun recoverAbilityByName(name: String) = api.recoverAbilityByName(name)
     suspend fun insert(pokemon: PokemonResponseModel) = dao.insert(pokemon)
     suspend fun delete(pokemon: PokemonResponseModel) = dao.delete(pokemon)
     fun getAll() = dao.getAll()

@@ -1,7 +1,6 @@
 package com.tods.project_pokemon.ui.details
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -45,21 +44,8 @@ class PokemonDetailsFragment: BaseFragment<FragmentPokemonDetailsBinding, Pokemo
         configDataCollection()
         configRecyclerView()
         configClickAdapter()
-    //    configClickButtons()
     }
 
-    private fun configClickButtons() = with(binding) {
-        imageFavorite.setOnClickListener {
-            MaterialAlertDialogBuilder(requireContext())
-                .setTitle(args.data.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.ROOT) else it.toString() })
-                .setMessage(getString(R.string.favorite_question))
-                .setNegativeButton(getString(R.string.cancel)) { dialog, _ ->
-                    dialog.dismiss()
-                }.setPositiveButton(getString(R.string.confirm)) { _, _ ->
-    //                viewModel.insert(args.data)
-                }.show()
-        }
-    }
 
     private fun configClickAdapter() {
         movesAdapter.setOnClickListener { data ->
@@ -88,21 +74,7 @@ class PokemonDetailsFragment: BaseFragment<FragmentPokemonDetailsBinding, Pokemo
                         configIcons(values)
                         configStats(values)
                         configCarousel(values)
-                        binding.imageFavorite.setOnClickListener {
-                            MaterialAlertDialogBuilder(requireContext())
-                                .setTitle(values.name.replaceFirstChar {
-                                    if (it.isLowerCase()) it.titlecase(
-                                        Locale.ROOT
-                                    ) else it.toString()
-                                })
-                                .setMessage(getString(R.string.favorite_question))
-                                .setNegativeButton(getString(R.string.cancel)) { dialog, _ ->
-                                    dialog.dismiss()
-                                }.setPositiveButton(getString(R.string.confirm)) { _, _ ->
-                                    viewModel.insert(values)
-                                    toast(getString(R.string.favorite_success))
-                                }.show()
-                        }
+                        configFavoriteButton(values)
                     }
                 }
                 is ResourceState.Error -> {
@@ -117,6 +89,24 @@ class PokemonDetailsFragment: BaseFragment<FragmentPokemonDetailsBinding, Pokemo
                 }
                 else -> { }
             }
+        }
+    }
+
+    private fun configFavoriteButton(values: PokemonResponseModel) {
+        binding.imageFavorite.setOnClickListener {
+            MaterialAlertDialogBuilder(requireContext())
+                .setTitle(values.name.replaceFirstChar {
+                    if (it.isLowerCase()) it.titlecase(
+                        Locale.ROOT
+                    ) else it.toString()
+                })
+                .setMessage(getString(R.string.favorite_question))
+                .setNegativeButton(getString(R.string.cancel)) { dialog, _ ->
+                    dialog.dismiss()
+                }.setPositiveButton(getString(R.string.confirm)) { _, _ ->
+                    viewModel.insert(values)
+                    toast(getString(R.string.favorite_success))
+                }.show()
         }
     }
 
@@ -183,6 +173,10 @@ class PokemonDetailsFragment: BaseFragment<FragmentPokemonDetailsBinding, Pokemo
                         Locale.getDefault()
                     ) else it.toString()
                 }
+                binding.textAbility1.setOnClickListener {
+                    val action = PokemonDetailsFragmentDirections.actionPokemonDetailsFragmentToPokemonAbilityFragment(values.abilities[0].ability.name)
+                    findNavController().navigate(action)
+                }
             }
             2 -> {
                 binding.textAbility1.text = values.abilities[0].ability.name.replaceFirstChar {
@@ -194,6 +188,14 @@ class PokemonDetailsFragment: BaseFragment<FragmentPokemonDetailsBinding, Pokemo
                     if (it.isLowerCase()) it.titlecase(
                         Locale.getDefault()
                     ) else it.toString()
+                }
+                binding.textAbility1.setOnClickListener {
+                    val action = PokemonDetailsFragmentDirections.actionPokemonDetailsFragmentToPokemonAbilityFragment(values.abilities[0].ability.name)
+                    findNavController().navigate(action)
+                }
+                binding.textAbility2.setOnClickListener {
+                    val action = PokemonDetailsFragmentDirections.actionPokemonDetailsFragmentToPokemonAbilityFragment(values.abilities[1].ability.name)
+                    findNavController().navigate(action)
                 }
             }
             3 -> {
@@ -211,6 +213,18 @@ class PokemonDetailsFragment: BaseFragment<FragmentPokemonDetailsBinding, Pokemo
                     if (it.isLowerCase()) it.titlecase(
                         Locale.getDefault()
                     ) else it.toString()
+                }
+                binding.textAbility1.setOnClickListener {
+                    val action = PokemonDetailsFragmentDirections.actionPokemonDetailsFragmentToPokemonAbilityFragment(values.abilities[0].ability.name)
+                    findNavController().navigate(action)
+                }
+                binding.textAbility2.setOnClickListener {
+                    val action = PokemonDetailsFragmentDirections.actionPokemonDetailsFragmentToPokemonAbilityFragment(values.abilities[1].ability.name)
+                    findNavController().navigate(action)
+                }
+                binding.textAbility3.setOnClickListener {
+                    val action = PokemonDetailsFragmentDirections.actionPokemonDetailsFragmentToPokemonAbilityFragment(values.abilities[2].ability.name)
+                    findNavController().navigate(action)
                 }
             }
             else -> { }
@@ -565,9 +579,9 @@ class PokemonDetailsFragment: BaseFragment<FragmentPokemonDetailsBinding, Pokemo
                 }
             }
             else -> {
-                binding.imageType1.isVisible = false
-                binding.imageType2.isVisible = false
-                binding.imageType3.isVisible = false
+                binding.imageType1.hide()
+                binding.imageType2.hide()
+                binding.imageType3.hide()
             }
         }
     }

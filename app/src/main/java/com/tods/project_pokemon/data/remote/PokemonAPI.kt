@@ -1,5 +1,6 @@
 package com.tods.project_pokemon.data.remote
 
+import com.tods.project_pokemon.data.model.abilities.AbilityResponseModel
 import com.tods.project_pokemon.data.model.evolutions.EvolutionsResponseModel
 import com.tods.project_pokemon.data.model.forms.FormsResponseModel
 import com.tods.project_pokemon.data.model.list.PokemonListResponseModel
@@ -20,6 +21,14 @@ interface PokemonAPI {
         @Query("limit") limit: Int? = null,
         @Query("offset") offset: Int? = null
     ): Response<PokemonListResponseModel>
+
+    @GET("ability/{name}")
+    suspend fun recoverAbilityByName(
+        @Path(
+            value = "name",
+            encoded = true
+        ) abilityName: String
+    ): Response<AbilityResponseModel>
 
     @GET("type/{name}")
     suspend fun recoverInfoByTypeName(

@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#FFC800</color>
     <color name="gray">#918E80</color>
+    <color name="light_gray">#DCD9CE</color>
     <color name="red">#FF2A36</color>
     <color name="green">#09AF2D</color>
     <color name="poison_background">#CD92DD</color>

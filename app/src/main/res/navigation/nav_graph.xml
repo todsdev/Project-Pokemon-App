@@ -57,6 +57,9 @@
         <argument
             android:name="data"
             app:argType="string" />
+        <action
+            android:id="@+id/action_pokemonDetailsFragment_to_pokemonAbilityFragment"
+            app:destination="@id/pokemonAbilityFragment" />
     </fragment>
 
     <fragment
@@ -87,5 +90,18 @@
         <action
             android:id="@+id/action_typesResultFragment_to_pokemonMoveFragment"
             app:destination="@id/pokemonMoveFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pokemonAbilityFragment"
+        android:name="com.tods.project_pokemon.ui.abilities.PokemonAbilityFragment"
+        android:label="PokemonAbilityFragment"
+        tools:layout="@layout/fragment_pokemon_ability">
+        <argument
+            android:name="data"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_pokemonAbilityFragment_to_pokemonDetailsFragment"
+            app:destination="@id/pokemonDetailsFragment" />
     </fragment>
 </navigation>
