@@ -47,7 +47,7 @@
         <entry key="app/src/main/res/drawable/ic_water_24.xml" value="0.146" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_pokemon_details.xml" value="0.20493827160493827" />
-        <entry key="app/src/main/res/layout/fragment_pokemon_favorites.xml" value="0.4072249589490969" />
+        <entry key="app/src/main/res/layout/fragment_pokemon_favorites.xml" value="0.38718872070312504" />
         <entry key="app/src/main/res/layout/fragment_pokemon_list.xml" value="0.29375" />
         <entry key="app/src/main/res/layout/fragment_pokemon_move.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_pokemon_search.xml" value="0.29375" />

@@ -72,4 +72,8 @@ class PokemonFavoriteAdapter(): ListAdapter<PokemonResponseModel, PokemonFavorit
     }
 
     override fun getItemCount(): Int = pokemons.size
+
+    fun recoverPokemonPosition(position: Int): PokemonResponseModel {
+        return pokemons[position]
+    }
 }
