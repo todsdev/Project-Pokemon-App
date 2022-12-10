@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    android:padding="10dp">
+    android:padding="@dimen/fragment_search_layout_padding">
 
     <ProgressBar
         android:id="@+id/progressSearchPokemon"
@@ -22,9 +22,9 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tvInputLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/fragment_search_text_width"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="@dimen/fragment_search_text_margin"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         app:boxStrokeColor="@color/white"
@@ -47,10 +47,10 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerSearchPokemon"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="10dp"
-        android:padding="10dp"
+        android:layout_width="@dimen/fragment_search_recycler_width_height"
+        android:layout_height="@dimen/fragment_search_recycler_width_height"
+        android:layout_margin="@dimen/fragment_search_recycler_margin"
+        android:padding="@dimen/fragment_search_recycler_padding"
         tools:listitem="@layout/item_pokemon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

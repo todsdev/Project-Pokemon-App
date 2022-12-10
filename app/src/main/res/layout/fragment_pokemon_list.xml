@@ -5,13 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black">
+    android:background="@color/black"
+    android:padding="@dimen/fragment_list_layout_padding">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:padding="10dp"
+        android:padding="@dimen/fragment_list_recycler_padding"
         android:id="@+id/recyclerPokemonList"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="@dimen/fragment_list_recycler_width"
+        android:layout_height="@dimen/fragment_list_recycler_height"
         android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
