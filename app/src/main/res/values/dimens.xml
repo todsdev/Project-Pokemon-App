@@ -124,7 +124,7 @@
     <dimen name="fragment_move_title_height">@dimen/dp_100</dimen>
     <dimen name="fragment_move_title_width">@dimen/dp_0</dimen>
     <dimen name="fragment_move_title_margin_end">@dimen/dp_0</dimen>
-    <dimen name="fragment_move_title_text_size">@dimen/dp_0</dimen>
+    <dimen name="fragment_move_title_text_size">@dimen/sp_26</dimen>
     <dimen name="fragment_move_subtitle_width">@dimen/dp_120</dimen>
     <dimen name="fragment_move_subtitle_margin_top">@dimen/dp_20</dimen>
     <dimen name="fragment_move_subtitle_margin_top_bigger">@dimen/dp_60</dimen>
