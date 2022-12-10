@@ -33,5 +33,5 @@ data class PokemonResponseModel(
     val stats: List<StatsModel>,
     @ColumnInfo
     @SerializedName("types")
-    val types: List<TypesModel>,
+    val types: List<TypesModel>
 ): Serializable
