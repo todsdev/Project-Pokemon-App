@@ -9,14 +9,14 @@
 
     <TextView
         android:id="@+id/textPokemonSplash"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="@dimen/splash_activity_layout_width"
+        android:layout_height="@dimen/splash_activity_layout_height"
         android:fontFamily="@font/alegreya_sc"
         android:gravity="center"
         android:text="@string/pokemon"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="80dp"
+        android:textSize="@dimen/splash_activity_text_size"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

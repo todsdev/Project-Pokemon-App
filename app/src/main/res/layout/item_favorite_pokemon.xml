@@ -5,12 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
+    android:layout_margin="@dimen/recycler_item_margin"
     android:backgroundTint="@color/black"
-    android:elevation="5dp"
-    app:cardCornerRadius="5dp"
+    android:elevation="@dimen/recycler_item_elevation"
+    app:cardCornerRadius="@dimen/recycler_item_corner"
     app:strokeColor="@color/yellow"
-    app:strokeWidth="2dp">
+    app:strokeWidth="@dimen/recycler_item_stroke">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -18,8 +18,8 @@
 
         <ImageView
             android:id="@+id/imageFavoritePokemon"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="@dimen/recycler_item_grid_image_height_width"
+            android:layout_height="@dimen/recycler_item_grid_image_height_width"
             android:contentDescription="@string/app_name"
             android:textAllCaps="true"
             android:scaleType="centerCrop"
@@ -30,13 +30,13 @@
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textNameFavorite"
             style="@android:style/TextAppearance.SearchResult.Subtitle"
-            android:padding="5dp"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:padding="@dimen/recycler_item_favorite_text_padding"
+            android:layout_width="@dimen/recycler_item_favorite_text_width"
+            android:layout_height="@dimen/recycler_item_favorite_text_height"
             android:gravity="center"
             android:text="@string/pokemon"
             android:textColor="@color/white"
-            android:textSize="24sp"
+            android:textSize="@dimen/recycler_item_favorite_text_size"
             android:textStyle="bold"
             app:fontFamily="@font/alegreya_sc"
             app:layout_constraintBottom_toBottomOf="parent"

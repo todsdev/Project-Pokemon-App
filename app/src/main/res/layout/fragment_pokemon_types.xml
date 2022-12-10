@@ -9,8 +9,8 @@
 
     <Button
         android:id="@+id/buttonFighting"
-        android:layout_width="175dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/fragment_types_button_width"
+        android:layout_height="@dimen/fragment_types_button_height"
         android:layout_marginStart="5dp"
         android:layout_marginTop="15dp"
         android:backgroundTint="@color/fighting_background"
@@ -25,8 +25,8 @@
 
     <Button
         android:id="@+id/buttonFire"
-        android:layout_width="175dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/fragment_types_button_width"
+        android:layout_height="@dimen/fragment_types_button_height"
         android:layout_marginStart="5dp"
         android:layout_marginTop="15dp"
         android:backgroundTint="@color/fire_background"
@@ -40,8 +40,8 @@
 
     <Button
         android:id="@+id/buttonPsychic"
-        android:layout_width="175dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/fragment_types_button_width"
+        android:layout_height="@dimen/fragment_types_button_height"
         android:layout_marginStart="5dp"
         android:layout_marginTop="15dp"
         android:backgroundTint="@color/psychic_background"
@@ -55,8 +55,8 @@
 
     <Button
         android:id="@+id/buttonIce"
-        android:layout_width="175dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/fragment_types_button_width"
+        android:layout_height="@dimen/fragment_types_button_height"
         android:layout_marginStart="5dp"
         android:layout_marginTop="15dp"
         android:backgroundTint="@color/ice_background"
@@ -70,8 +70,8 @@
 
     <Button
         android:id="@+id/buttonGhost"
-        android:layout_width="175dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/fragment_types_button_width"
+        android:layout_height="@dimen/fragment_types_button_height"
         android:layout_marginStart="5dp"
         android:layout_marginTop="15dp"
         android:backgroundTint="@color/ghost_background"
@@ -85,8 +85,8 @@
 
     <Button
         android:id="@+id/buttonDragon"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/fragment_types_button_width"
+        android:layout_height="@dimen/fragment_types_button_height"
         android:layout_marginStart="5dp"
         android:layout_marginTop="15dp"
         android:backgroundTint="@color/dragon_background"
@@ -100,8 +100,8 @@
 
     <Button
         android:id="@+id/buttonFlying"
-        android:layout_width="175dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/fragment_types_button_width"
+        android:layout_height="@dimen/fragment_types_button_height"
         android:layout_marginStart="5dp"
         android:layout_marginTop="15dp"
         android:backgroundTint="@color/flying_background"
@@ -115,8 +115,8 @@
 
     <Button
         android:id="@+id/buttonElectric"
-        android:layout_width="175dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/fragment_types_button_width"
+        android:layout_height="@dimen/fragment_types_button_height"
         android:layout_marginStart="5dp"
         android:layout_marginTop="15dp"
         android:backgroundTint="@color/electric_background"
@@ -130,8 +130,8 @@
 
     <Button
         android:id="@+id/buttonNormal"
-        android:layout_width="175dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/fragment_types_button_width"
+        android:layout_height="@dimen/fragment_types_button_height"
         android:layout_marginStart="5dp"
         android:layout_marginTop="15dp"
         android:backgroundTint="@color/normal_background"
@@ -145,8 +145,8 @@
 
     <Button
         android:id="@+id/buttonDark"
-        android:layout_width="175dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/fragment_types_button_width"
+        android:layout_height="@dimen/fragment_types_button_height"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="5dp"
         android:backgroundTint="@color/dark_background"
@@ -160,8 +160,8 @@
 
     <Button
         android:id="@+id/buttonFairy"
-        android:layout_width="175dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/fragment_types_button_width"
+        android:layout_height="@dimen/fragment_types_button_height"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="5dp"
         android:backgroundTint="@color/fairy_background"
@@ -175,8 +175,8 @@
 
     <Button
         android:id="@+id/buttonGround"
-        android:layout_width="175dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/fragment_types_button_width"
+        android:layout_height="@dimen/fragment_types_button_height"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="5dp"
         android:backgroundTint="@color/ground_background"
@@ -190,8 +190,8 @@
 
     <Button
         android:id="@+id/buttonGrass"
-        android:layout_width="175dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/fragment_types_button_width"
+        android:layout_height="@dimen/fragment_types_button_height"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="5dp"
         android:backgroundTint="@color/grass_background"
@@ -205,8 +205,8 @@
 
     <Button
         android:id="@+id/buttonPoison"
-        android:layout_width="175dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/fragment_types_button_width"
+        android:layout_height="@dimen/fragment_types_button_height"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="5dp"
         android:backgroundTint="@color/poison_background"
@@ -220,8 +220,8 @@
 
     <Button
         android:id="@+id/buttonSteel"
-        android:layout_width="175dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/fragment_types_button_width"
+        android:layout_height="@dimen/fragment_types_button_height"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="5dp"
         android:backgroundTint="@color/steel_background"
@@ -235,8 +235,8 @@
 
     <Button
         android:id="@+id/buttonWater"
-        android:layout_width="175dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/fragment_types_button_width"
+        android:layout_height="@dimen/fragment_types_button_height"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="5dp"
         android:backgroundTint="@color/water_background"
@@ -250,8 +250,8 @@
 
     <Button
         android:id="@+id/buttonBug"
-        android:layout_width="175dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/fragment_types_button_width"
+        android:layout_height="@dimen/fragment_types_button_height"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="5dp"
         android:backgroundTint="@color/bug_background"
@@ -265,8 +265,8 @@
 
     <Button
         android:id="@+id/buttonRock"
-        android:layout_width="175dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/fragment_types_button_width"
+        android:layout_height="@dimen/fragment_types_button_height"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="5dp"
         android:backgroundTint="@color/rock_background"
