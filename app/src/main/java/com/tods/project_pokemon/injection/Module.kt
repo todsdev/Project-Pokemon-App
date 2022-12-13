@@ -33,7 +33,7 @@ object Module {
 
     @Singleton
     @Provides
-    fun provideMarvelDao(database: PokemonDatabase) = database.pokemonDao()
+    fun providePokemonDao(database: PokemonDatabase) = database.pokemonDao()
 
     @Singleton
     @Provides
